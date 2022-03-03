@@ -16,7 +16,7 @@ st.subheader("Upload your files here : ")
 
 upload_data = st.file_uploader("Choose a CSV file", type = ['CSV'])
 if upload_data is not None:
-    read_data = pd.read_csv(upload_data, encoding='latin-1')
+    read_data = pd.read_csv(upload_data, encoding='latin-1',on_bad_lines='skip)
 
 
 # Looking at your dataset
